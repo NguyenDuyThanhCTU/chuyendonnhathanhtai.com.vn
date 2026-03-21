@@ -19,23 +19,23 @@ export default function ProfessionalTeam() {
           className="absolute inset-0 bg-cover bg-center opacity-40 mix-blend-overlay"
           style={{
             backgroundImage:
-              "url('https://chuyennhatrongoi24h.net/wp-content/uploads/2024/12/chuyen-nha-tron-goi.jpg')",
+              "url('https://firebasestorage.googleapis.com/v0/b/xedulichhoanggia.firebasestorage.app/o/avatar%2F8Dsx4kJ9qi7Mg8rCOs6JdP53i6X6OqpbsLEHQ0zmeMdlHwRpZH.jpg?alt=media&token=111a8cf6-935d-412f-8bb0-0c0aaeb9667e')",
           }}
         ></div>
 
         {/* Nội dung cột trái */}
         <div className="relative z-10 w-full max-w-lg lg:pr-8 flex flex-col justify-center">
           <span className="text-[#a3e635] font-bold text-lg md:text-xl uppercase mb-2 block">
-            CHUYỂN NHÀ TRỌN GÓI 24H
+            Dọn Nhà Chuyên Nghiệp Thành Tài
           </span>
           <h2 className="text-3xl md:text-4xl font-extrabold text-white uppercase leading-snug mb-6">
             Dịch vụ vận chuyển <br /> Uy tín - Chất lượng
           </h2>
           <p className="text-gray-200 leading-relaxed text-[15px]">
             Với quy trình vận chuyển chuyên nghiệp,{" "}
-            <strong>Chuyển Nhà Trọn Gói 24h</strong> đã được khách hàng bình
-            chọn là đơn vị cung cấp dịch vụ uy tín – chuyên nghiệp – chất lượng
-            tại thành phố Hồ Chí Minh và các khu vực lân cận.
+            <strong>Dọn Nhà Chuyên Nghiệp Thành Tài </strong> đã được khách hàng
+            bình chọn là đơn vị cung cấp dịch vụ uy tín – chuyên nghiệp – chất
+            lượng tại thành phố Hồ Chí Minh và các khu vực lân cận.
           </p>
         </div>
       </div>

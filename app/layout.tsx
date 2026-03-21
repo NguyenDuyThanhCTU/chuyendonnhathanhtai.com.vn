@@ -10,6 +10,7 @@ import { find } from "@config/lib/api";
 import { Metadata } from "next";
 import { SEOProps } from "@assets/props/PropsConfig";
 import { LocalFindById } from "@components/items/Handle";
+import Copyright from "@components/layout/Copyright";
 
 const roboto = Roboto({
   subsets: ["latin", "vietnamese"],
@@ -34,17 +35,19 @@ export default async function RootLayout({
   children: React.ReactNode;
 }) {
   const Config = await find("Config");
+  const Posts = await find("Posts");
+
   return (
     <html lang="en">
       <StateProvider>
         <body
           className={`font-sans antialiased text-gray-800 bg-white ${roboto.className}`}
         >
-          {" "}
-          <Header />
+          <Header Posts={Posts} Config={Config} />
           <main className="d:mt-[0px] p:mt-[100px]">{children}</main>
           <FloatingContact Config={Config} />
-          <Footer />
+          <Footer Config={Config} />
+          <Copyright />
         </body>
       </StateProvider>
     </html>

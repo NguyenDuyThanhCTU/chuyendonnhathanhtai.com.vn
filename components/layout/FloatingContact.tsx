@@ -1,15 +1,16 @@
-import { ContactProps } from "@assets/props/PropsConfig";
+import { ContactProps, SocialMediaProps } from "@assets/props/PropsConfig";
 import { LocalFindById } from "@components/items/Handle";
 import React from "react";
 
 export default function FloatingContact({ Config }: { Config: Array<any> }) {
   const ContactData: ContactProps = LocalFindById(Config, "contact");
+  const SocialMedia: SocialMediaProps = LocalFindById(Config, "SocialMedia");
 
   return (
     <div className="fixed bottom-10 left-4 z-50 flex flex-col gap-5">
       {/* Nút Messenger */}
       <a
-        href="#"
+        href={SocialMedia?.messenger}
         target="_blank"
         rel="nofollow noreferrer"
         className="relative group w-[50px] h-[50px] flex items-center justify-center"

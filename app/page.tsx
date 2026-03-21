@@ -14,16 +14,29 @@ import ServiceGrid from "@components/client/home/ServiceGrid";
 import ProfessionalTeam from "@components/client/home/ProfessionalTeam";
 import TeamSlider from "@components/client/home/TeamSlider";
 import BlogSection from "@components/client/home/BlogSection";
+import { find } from "@config/lib/api";
+import { ContactProps } from "@assets/props/PropsConfig";
+import { LocalFindById } from "@components/items/Handle";
+import { PostProps } from "@assets/props/PropsPost";
+import { CollectionProps } from "@assets/props/Props";
 
-export default function Home() {
+export default async function Home() {
+  const Config = await find("Config");
+  const Posts: PostProps[] = await find("Posts");
+  const Collections: CollectionProps[] = await find("Collections");
+  const ContactData: ContactProps = LocalFindById(Config, "contact");
+
+  const ServicePost = Posts?.filter((item) => item.level0 === "dich-vu-khac");
+  const BlogPost = Posts?.filter((item) => item.level0 === "blog");
+
   return (
     <>
-      <HeroSection />
+      <HeroSection Contact={ContactData} />
       <FeatureSection />
-      <ServiceGrid />
+      <ServiceGrid Data={ServicePost} />
       <ProfessionalTeam />
-      <TeamSlider />
-      <BlogSection />
+      <TeamSlider Data={Collections} />
+      <BlogSection Data={BlogPost} />
     </>
   );
 }

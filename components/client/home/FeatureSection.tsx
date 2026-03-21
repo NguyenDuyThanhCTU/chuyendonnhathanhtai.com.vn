@@ -4,19 +4,19 @@ import Image from "next/image";
 export default function FeatureSection() {
   const features = [
     {
-      icon: "https://chuyennhatrongoi24h.net/wp-content/uploads/2024/11/icon-1.png",
+      icon: "https://firebasestorage.googleapis.com/v0/b/xedulichhoanggia.firebasestorage.app/o/icon-1.webp?alt=media&token=c2a337bf-fbe2-4747-a27d-69457534ba6f",
       text: "Thiết bị, đồ đạc<br/>đóng gói cẩn thận",
     },
     {
-      icon: "https://chuyennhatrongoi24h.net/wp-content/uploads/2024/11/icon-2.png",
+      icon: "https://firebasestorage.googleapis.com/v0/b/xedulichhoanggia.firebasestorage.app/o/icon-2.webp?alt=media&token=1ab5dc59-1d50-4ae1-bd51-8a567d476065",
       text: "Giá tốt, tiết kiệm<br/>cho khách hàng",
     },
     {
-      icon: "https://chuyennhatrongoi24h.net/wp-content/uploads/2024/11/icon-3.png",
+      icon: "https://firebasestorage.googleapis.com/v0/b/xedulichhoanggia.firebasestorage.app/o/icon-3.webp?alt=media&token=c3daf2fa-7733-40b8-82e1-c599a465274a",
       text: "Bồi thường khi<br/>đồ đạc bị hư hỏng",
     },
     {
-      icon: "https://chuyennhatrongoi24h.net/wp-content/uploads/2024/11/icon-4.png",
+      icon: "https://firebasestorage.googleapis.com/v0/b/xedulichhoanggia.firebasestorage.app/o/icon-4.webp?alt=media&token=40f41eaf-038e-4d68-9589-a504c7f27c79",
       text: "Nhân viên làm việc <br/>chuyên nghiệp và nhiệt tình",
     },
   ];
@@ -27,14 +27,14 @@ export default function FeatureSection() {
         {/* Nửa bên trái: Background xanh lá */}
         <div className="lg:w-[45%] bg-[#137b38] text-white p-8 lg:p-12 flex flex-col justify-center">
           <h2 className="text-2xl lg:text-3xl font-extrabold mb-6 uppercase tracking-tight">
-            Về Chuyển Nhà Trọn Gói 24h
+            Về Dọn Nhà Chuyên Nghiệp Thành Tài
           </h2>
           <div className="text-sm lg:text-base leading-relaxed opacity-95 space-y-4">
             <p>
-              <strong>Chuyển Nhà Trọn Gói 24h</strong> là một trong những đơn vị
-              dẫn đầu đã hoạt động và phát triển hơn 10 năm trong lĩnh vực vận
-              chuyển nhà – chuyển văn phòng trọn gói cao cấp và chuyển kho
-              xưởng.
+              <strong>Dọn Nhà Chuyên Nghiệp Thành Tài </strong> là một trong
+              những đơn vị dẫn đầu đã hoạt động và phát triển hơn 10 năm trong
+              lĩnh vực vận chuyển nhà – chuyển văn phòng trọn gói cao cấp và
+              chuyển kho xưởng.
             </p>
             <p>
               Cùng với sự nỗ lực không ngừng của Ban lãnh đạo và đội ngũ nhân

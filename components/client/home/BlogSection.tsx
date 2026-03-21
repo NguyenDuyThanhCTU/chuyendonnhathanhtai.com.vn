@@ -1,56 +1,8 @@
 import React from "react";
 import Image from "next/image";
+import { PostProps } from "@assets/props/PropsPost";
 
-export default function BlogSection() {
-  // Dữ liệu bài viết nổi bật (Bên trái)
-  const featuredPost = {
-    title: "Xem ngày tốt chuyển nhà tháng 4 năm 2026 nhanh, chuẩn và thực tế",
-    date: "Tháng 3 5, 2026",
-    image:
-      "https://chuyennhatrongoi24h.net/wp-content/uploads/2026/03/Ngay-tot-chuyen-nha-thang-4.jpg",
-    link: "#",
-  };
-
-  // Dữ liệu danh sách bài viết (Bên phải)
-  const listPosts = [
-    {
-      title:
-        "Thuê xe ba gác chuyển trọ bao nhiêu tiền? Kinh nghiệm tiết kiệm chi phí",
-      date: "Tháng 2 28, 2026",
-      image:
-        "https://chuyennhatrongoi24h.net/wp-content/uploads/2026/02/Thue-xe-ba-gac-chuyen-tro-bao-nhieu-tien-2-300x225.jpg",
-      link: "#",
-    },
-    {
-      title: "Mẹo tiết kiệm tiền thuê xe tải chuyển nhà chuyển đồ",
-      date: "Tháng 2 24, 2026",
-      image:
-        "https://chuyennhatrongoi24h.net/wp-content/uploads/2026/02/Tiet-kiem-tien-thue-xe-tai-chuyen-nha-cho-do-300x225.jpg",
-      link: "#",
-    },
-    {
-      title: "Cách chọn taxi tải chuyển nhà đúng nhu cầu, tránh phát sinh",
-      date: "Tháng 2 23, 2026",
-      image:
-        "https://chuyennhatrongoi24h.net/wp-content/uploads/2026/02/Cach-chon-taxi-tai-chuyen-nha-300x225.jpg",
-      link: "#",
-    },
-    {
-      title: "Cách chở hàng cồng kềnh xe máy đúng luật để không bị xử phạt",
-      date: "Tháng 2 12, 2026",
-      image:
-        "https://chuyennhatrongoi24h.net/wp-content/uploads/2026/02/Cho-hang-cong-kenh-xe-may-300x225.jpg",
-      link: "#",
-    },
-    {
-      title: "Thuê taxi tải giá rẻ ở đâu để không phát sinh chi phí?",
-      date: "Tháng 2 11, 2026",
-      image:
-        "https://chuyennhatrongoi24h.net/wp-content/uploads/2026/02/Thue-taxi-tai-gia-re-o-dau-300x225.jpg",
-      link: "#",
-    },
-  ];
-
+export default function BlogSection({ Data }: { Data: PostProps[] }) {
   return (
     <section className="bg-white py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -69,13 +21,13 @@ export default function BlogSection() {
           {/* CỘT TRÁI: Bài viết nổi bật */}
           <div className="group cursor-pointer">
             <a
-              href={featuredPost.link}
+              href={Data[0]?.url}
               className="block overflow-hidden rounded-md mb-4 relative"
             >
               <div className="aspect-[4/3] w-full relative bg-gray-100">
                 <Image
-                  src={featuredPost.image}
-                  alt={featuredPost.title}
+                  src={Data[0]?.image}
+                  alt={Data[0]?.title}
                   fill
                   className="object-cover transform transition-transform duration-500 group-hover:scale-105"
                   sizes="(max-width: 1024px) 100vw, 50vw"
@@ -83,21 +35,21 @@ export default function BlogSection() {
               </div>
             </a>
             <div>
-              <a href={featuredPost.link}>
+              <a href={Data[0]?.url}>
                 <h3 className="text-xl md:text-2xl font-bold text-gray-800 hover:text-[#137b38] transition-colors duration-300 mb-2 leading-snug">
-                  {featuredPost.title}
+                  {Data[0]?.title}
                 </h3>
               </a>
-              <span className="text-sm text-gray-500">{featuredPost.date}</span>
+              <span className="text-sm text-gray-500">{Data[0]?.date}</span>
             </div>
           </div>
 
           {/* CỘT PHẢI: Danh sách bài viết nhỏ */}
           <div className="flex flex-col gap-6">
-            {listPosts.map((post, index) => (
+            {Data.slice(1, Data.length - 1).map((post, index) => (
               <a
                 key={index}
-                href={post.link}
+                href={post.url}
                 className="group flex flex-row items-center gap-4 bg-white hover:bg-gray-50 transition-colors duration-300 p-2 -mx-2 rounded-md"
               >
                 {/* Thumbnail nhỏ */}

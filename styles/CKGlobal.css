@@ -22,76 +22,28 @@
   --ck-todo-list-checkmark-size: 16px;
 }
 
-/* @ckeditor/ckeditor5-table/theme/tablecolumnresize.css */
+/* Các class hệ thống của CKEditor (Giữ nguyên) */
 .ck-content .table .ck-table-resized {
-  table-layout: fixed !;
+  table-layout: fixed !important;
 }
-
-/* @ckeditor/ckeditor5-table/theme/tablecolumnresize.css */
 .ck-content .table table {
   overflow: hidden;
 }
-
-/* @ckeditor/ckeditor5-table/theme/tablecolumnresize.css */
 .ck-content .table td,
 .ck-content .table th {
   overflow-wrap: break-word;
   position: relative;
 }
-
-/* @ckeditor/ckeditor5-table/theme/table.css */
 .ck-content .table {
   margin: 0.9em auto;
   display: table;
 }
-
-/* @ckeditor/ckeditor5-table/theme/table.css */
-.ck-content .table table {
-  border-collapse: collapse;
-  border-spacing: 0;
-  width: 100%;
-  height: 100%;
-  border: 1px double hsl(0, 0%, 70%);
-}
-
-/* @ckeditor/ckeditor5-table/theme/table.css */
-.ck-content .table table td,
-.ck-content .table table th {
-  min-width: 2em;
-  padding: 0.4em;
-  border: 1px solid hsl(0, 0%, 75%);
-}
-
-/* @ckeditor/ckeditor5-table/theme/table.css */
-.ck-content .table table th {
-  font-weight: bold;
-  background: hsla(0, 0%, 0%, 5%);
-}
-
-/* @ckeditor/ckeditor5-table/theme/table.css */
 .ck-content[dir="rtl"] .table th {
   text-align: right;
 }
-
-/* @ckeditor/ckeditor5-table/theme/table.css */
 .ck-content[dir="ltr"] .table th {
   text-align: left;
 }
-
-/* @ckeditor/ckeditor5-table/theme/tablecaption.css */
-.ck-content .table > figcaption {
-  display: table-caption;
-  caption-side: top;
-  word-break: break-word;
-  text-align: center;
-  color: var(--ck-color-selector-caption-text);
-  background-color: var(--ck-color-selector-caption-background);
-  padding: 0.6em;
-  font-size: 0.75em;
-  outline-offset: -1px;
-}
-
-/* @ckeditor/ckeditor5-page-break/theme/pagebreak.css */
 .ck-content .page-break {
   position: relative;
   clear: both;
@@ -100,16 +52,12 @@
   align-items: center;
   justify-content: center;
 }
-
-/* @ckeditor/ckeditor5-page-break/theme/pagebreak.css */
 .ck-content .page-break::after {
   content: "";
   position: absolute;
   border-bottom: 2px dashed hsl(0, 0%, 77%);
   width: 100%;
 }
-
-/* @ckeditor/ckeditor5-page-break/theme/pagebreak.css */
 .ck-content .page-break__label {
   position: relative;
   z-index: 1;
@@ -129,32 +77,22 @@
   -ms-user-select: none;
   user-select: none;
 }
-
-/* @ckeditor/ckeditor5-media-embed/theme/mediaembed.css */
 .ck-content .media {
   clear: both;
   margin: 0.9em 0;
   display: block;
   min-width: 15em;
 }
-
-/* @ckeditor/ckeditor5-list/theme/todolist.css */
 .ck-content .todo-list {
   list-style: none;
 }
-
-/* @ckeditor/ckeditor5-list/theme/todolist.css */
 .ck-content .todo-list li {
   position: relative;
   margin-bottom: 5px;
 }
-
-/* @ckeditor/ckeditor5-list/theme/todolist.css */
 .ck-content .todo-list li .todo-list {
   margin-top: 5px;
 }
-
-/* @ckeditor/ckeditor5-list/theme/todolist.css */
 .ck-content .todo-list .todo-list__label > input {
   -webkit-appearance: none;
   display: inline-block;
@@ -168,16 +106,12 @@
   right: 0;
   margin-left: 0;
 }
-
-/* @ckeditor/ckeditor5-list/theme/todolist.css */
 .ck-content[dir="rtl"] .todo-list .todo-list__label > input {
   left: 0;
   margin-right: 0;
   right: -25px;
   margin-left: -15px;
 }
-
-/* @ckeditor/ckeditor5-list/theme/todolist.css */
 .ck-content .todo-list .todo-list__label > input::before {
   display: block;
   position: absolute;
@@ -189,8 +123,6 @@
   border-radius: 2px;
   transition: 250ms ease-in-out box-shadow;
 }
-
-/* @ckeditor/ckeditor5-list/theme/todolist.css */
 .ck-content .todo-list .todo-list__label > input::after {
   display: block;
   position: absolute;
@@ -207,32 +139,22 @@
     calc(var(--ck-todo-list-checkmark-size) / 8) 0;
   transform: rotate(45deg);
 }
-
-/* @ckeditor/ckeditor5-list/theme/todolist.css */
 .ck-content .todo-list .todo-list__label > input[checked]::before {
   background: hsl(126, 64%, 41%);
   border-color: hsl(126, 64%, 41%);
 }
-
-/* @ckeditor/ckeditor5-list/theme/todolist.css */
 .ck-content .todo-list .todo-list__label > input[checked]::after {
   border-color: hsl(0, 0%, 100%);
 }
-
-/* @ckeditor/ckeditor5-list/theme/todolist.css */
 .ck-content .todo-list .todo-list__label .todo-list__label__description {
   vertical-align: middle;
 }
-
-/* @ckeditor/ckeditor5-list/theme/todolist.css */
 .ck-content
   .todo-list
   .todo-list__label.todo-list__label_without-description
   input[type="checkbox"] {
   position: absolute;
 }
-
-/* @ckeditor/ckeditor5-list/theme/todolist.css */
 .ck-editor__editable.ck-content .todo-list .todo-list__label > input,
 .ck-editor__editable.ck-content
   .todo-list
@@ -241,8 +163,6 @@
   > input {
   cursor: pointer;
 }
-
-/* @ckeditor/ckeditor5-list/theme/todolist.css */
 .ck-editor__editable.ck-content
   .todo-list
   .todo-list__label
@@ -254,8 +174,6 @@
   > input:hover::before {
   box-shadow: 0 0 0 5px hsla(0, 0%, 0%, 0.1);
 }
-
-/* @ckeditor/ckeditor5-list/theme/todolist.css */
 .ck-editor__editable.ck-content
   .todo-list
   .todo-list__label
@@ -273,8 +191,6 @@
   right: 0;
   margin-left: 0;
 }
-
-/* @ckeditor/ckeditor5-list/theme/todolist.css */
 .ck-editor__editable.ck-content[dir="rtl"]
   .todo-list
   .todo-list__label
@@ -285,8 +201,6 @@
   right: -25px;
   margin-left: -15px;
 }
-
-/* @ckeditor/ckeditor5-list/theme/todolist.css */
 .ck-editor__editable.ck-content
   .todo-list
   .todo-list__label
@@ -302,8 +216,6 @@
   border-radius: 2px;
   transition: 250ms ease-in-out box-shadow;
 }
-
-/* @ckeditor/ckeditor5-list/theme/todolist.css */
 .ck-editor__editable.ck-content
   .todo-list
   .todo-list__label
@@ -324,8 +236,6 @@
     calc(var(--ck-todo-list-checkmark-size) / 8) 0;
   transform: rotate(45deg);
 }
-
-/* @ckeditor/ckeditor5-list/theme/todolist.css */
 .ck-editor__editable.ck-content
   .todo-list
   .todo-list__label
@@ -334,8 +244,6 @@
   background: hsl(126, 64%, 41%);
   border-color: hsl(126, 64%, 41%);
 }
-
-/* @ckeditor/ckeditor5-list/theme/todolist.css */
 .ck-editor__editable.ck-content
   .todo-list
   .todo-list__label
@@ -343,61 +251,39 @@
   > input[checked]::after {
   border-color: hsl(0, 0%, 100%);
 }
-
-/* @ckeditor/ckeditor5-list/theme/todolist.css */
 .ck-editor__editable.ck-content
   .todo-list
   .todo-list__label.todo-list__label_without-description
   input[type="checkbox"] {
   position: absolute;
 }
-
-/* @ckeditor/ckeditor5-list/theme/list.css */
 .ck-content ol {
   list-style-type: decimal;
 }
-
-/* @ckeditor/ckeditor5-list/theme/list.css */
 .ck-content ol ol {
   list-style-type: lower-latin;
 }
-
-/* @ckeditor/ckeditor5-list/theme/list.css */
 .ck-content ol ol ol {
   list-style-type: lower-roman;
 }
-
-/* @ckeditor/ckeditor5-list/theme/list.css */
 .ck-content ol ol ol ol {
   list-style-type: upper-latin;
 }
-
-/* @ckeditor/ckeditor5-list/theme/list.css */
 .ck-content ol ol ol ol ol {
   list-style-type: upper-roman;
 }
-
-/* @ckeditor/ckeditor5-list/theme/list.css */
 .ck-content ul {
   list-style-type: disc;
 }
-
-/* @ckeditor/ckeditor5-list/theme/list.css */
 .ck-content ul ul {
   list-style-type: circle;
 }
-
-/* @ckeditor/ckeditor5-list/theme/list.css */
 .ck-content ul ul ul {
   list-style-type: square;
 }
-
-/* @ckeditor/ckeditor5-list/theme/list.css */
 .ck-content ul ul ul ul {
   list-style-type: square;
 }
-
-/* @ckeditor/ckeditor5-image/theme/image.css */
 .ck-content .image {
   display: table;
   clear: both;
@@ -405,8 +291,6 @@
   margin: 0.9em auto;
   min-width: 50px;
 }
-
-/* @ckeditor/ckeditor5-image/theme/image.css */
 .ck-content .image img {
   display: block;
   margin: 0 auto;
@@ -414,230 +298,130 @@
   min-width: 100%;
   height: auto;
 }
-
-/* @ckeditor/ckeditor5-image/theme/image.css */
 .ck-content .image-inline {
-  /*
-     * Normally, the .image-inline would have "display: inline-block" and "img { width: 100% }" (to follow the wrapper while resizing).; 
-     * Unfortunately, together with "srcset", it gets automatically stretched up to the width of the editing root.
-     * This strange behavior does not happen with inline-flex.
-     */
   display: inline-flex;
   max-width: 100%;
   align-items: flex-start;
 }
-
-/* @ckeditor/ckeditor5-image/theme/image.css */
 .ck-content .image-inline picture {
   display: flex;
 }
-
-/* @ckeditor/ckeditor5-image/theme/image.css */
 .ck-content .image-inline picture,
 .ck-content .image-inline img {
   flex-grow: 1;
   flex-shrink: 1;
   max-width: 100%;
 }
-
-/* @ckeditor/ckeditor5-image/theme/imageresize.css */
 .ck-content img.image_resized {
   height: auto;
 }
-
-/* @ckeditor/ckeditor5-image/theme/imageresize.css */
 .ck-content .image.image_resized {
   max-width: 100%;
   display: block;
   box-sizing: border-box;
 }
-
-/* @ckeditor/ckeditor5-image/theme/imageresize.css */
 .ck-content .image.image_resized img {
   width: 100%;
 }
-
-/* @ckeditor/ckeditor5-image/theme/imageresize.css */
 .ck-content .image.image_resized > figcaption {
   display: block;
 }
-
-/* @ckeditor/ckeditor5-image/theme/imagecaption.css */
-.ck-content .image > figcaption {
-  display: table-caption;
-  caption-side: bottom;
-  word-break: break-word;
-  color: var(--ck-color-image-caption-text);
-  background-color: var(--ck-color-image-caption-background);
-  padding: 0.6em;
-  font-size: 0.75em;
-  outline-offset: -1px;
-}
-
-/* @ckeditor/ckeditor5-image/theme/imagestyle.css */
 .ck-content .image-style-block-align-left,
 .ck-content .image-style-block-align-right {
   max-width: calc(100% - var(--ck-image-style-spacing));
 }
-
-/* @ckeditor/ckeditor5-image/theme/imagestyle.css */
 .ck-content .image-style-align-left,
 .ck-content .image-style-align-right {
   clear: none;
 }
-
-/* @ckeditor/ckeditor5-image/theme/imagestyle.css */
 .ck-content .image-style-side {
   float: right;
   margin-left: var(--ck-image-style-spacing);
   max-width: 50%;
 }
-
-/* @ckeditor/ckeditor5-image/theme/imagestyle.css */
 .ck-content .image-style-align-left {
   float: left;
   margin-right: var(--ck-image-style-spacing);
 }
-
-/* @ckeditor/ckeditor5-image/theme/imagestyle.css */
 .ck-content .image-style-align-center {
   margin-left: auto;
   margin-right: auto;
 }
-
-/* @ckeditor/ckeditor5-image/theme/imagestyle.css */
 .ck-content .image-style-align-right {
   float: right;
   margin-left: var(--ck-image-style-spacing);
 }
-
-/* @ckeditor/ckeditor5-image/theme/imagestyle.css */
 .ck-content .image-style-block-align-right {
   margin-right: 0;
   margin-left: auto;
 }
-
-/* @ckeditor/ckeditor5-image/theme/imagestyle.css */
 .ck-content .image-style-block-align-left {
   margin-left: 0;
   margin-right: auto;
 }
-
-/* @ckeditor/ckeditor5-image/theme/imagestyle.css */
 .ck-content p + .image-style-align-left,
 .ck-content p + .image-style-align-right,
 .ck-content p + .image-style-side {
   margin-top: 0;
 }
-
-/* @ckeditor/ckeditor5-image/theme/imagestyle.css */
 .ck-content .image-inline.image-style-align-left,
 .ck-content .image-inline.image-style-align-right {
   margin-top: var(--ck-inline-image-style-spacing);
   margin-bottom: var(--ck-inline-image-style-spacing);
 }
-
-/* @ckeditor/ckeditor5-image/theme/imagestyle.css */
 .ck-content .image-inline.image-style-align-left {
   margin-right: var(--ck-inline-image-style-spacing);
 }
-
-/* @ckeditor/ckeditor5-image/theme/imagestyle.css */
 .ck-content .image-inline.image-style-align-right {
   margin-left: var(--ck-inline-image-style-spacing);
 }
-
-/* @ckeditor/ckeditor5-highlight/theme/highlight.css */
 .ck-content .marker-yellow {
   background-color: var(--ck-highlight-marker-yellow);
 }
-
-/* @ckeditor/ckeditor5-highlight/theme/highlight.css */
 .ck-content .marker-green {
   background-color: var(--ck-highlight-marker-green);
 }
-
-/* @ckeditor/ckeditor5-highlight/theme/highlight.css */
 .ck-content .marker-pink {
   background-color: var(--ck-highlight-marker-pink);
 }
-
-/* @ckeditor/ckeditor5-highlight/theme/highlight.css */
 .ck-content .marker-blue {
   background-color: var(--ck-highlight-marker-blue);
 }
-
-/* @ckeditor/ckeditor5-highlight/theme/highlight.css */
 .ck-content .pen-red {
   color: var(--ck-highlight-pen-red);
   background-color: transparent;
 }
-
-/* @ckeditor/ckeditor5-highlight/theme/highlight.css */
 .ck-content .pen-green {
   color: var(--ck-highlight-pen-green);
   background-color: transparent;
 }
-
-/* @ckeditor/ckeditor5-block-quote/theme/blockquote.css */
-.ck-content blockquote {
-  overflow: hidden;
-  padding-right: 1.5em;
-  padding-left: 1.5em;
-  margin-left: 0;
-  margin-right: 0;
-  font-style: italic;
-  border-left: solid 5px hsl(0, 0%, 80%);
-}
-
-/* @ckeditor/ckeditor5-block-quote/theme/blockquote.css */
-.ck-content[dir="rtl"] blockquote {
-  border-left: 0;
-  border-right: solid 5px hsl(0, 0%, 80%);
-}
-
-/* @ckeditor/ckeditor5-basic-styles/theme/code.css */
 .ck-content code {
   background-color: hsla(0, 0%, 78%, 0.3);
   padding: 0.15em;
   border-radius: 2px;
 }
-
-/* @ckeditor/ckeditor5-font/theme/fontsize.css */
 .ck-content .text-tiny {
   font-size: 0.7em;
 }
-
-/* @ckeditor/ckeditor5-font/theme/fontsize.css */
 .ck-content .text-small {
   font-size: 0.85em;
 }
-
-/* @ckeditor/ckeditor5-font/theme/fontsize.css */
 .ck-content .text-big {
   font-size: 1.4em;
 }
-
-/* @ckeditor/ckeditor5-font/theme/fontsize.css */
 .ck-content .text-huge {
   font-size: 1.8em;
 }
-
-/* @ckeditor/ckeditor5-mention/theme/mention.css */
 .ck-content .mention {
   background: var(--ck-color-mention-background);
   color: var(--ck-color-mention-text);
 }
-
-/* @ckeditor/ckeditor5-horizontal-line/theme/horizontalline.css */
 .ck-content hr {
   margin: 15px 0;
   height: 4px;
   background: hsl(0, 0%, 87%);
   border: 0;
 }
-
-/* @ckeditor/ckeditor5-code-block/theme/codeblock.css */
 .ck-content pre {
   padding: 1em;
   color: hsl(0, 0%, 20.8%);
@@ -651,89 +435,161 @@
   font-style: normal;
   min-width: 200px;
 }
-
-/* @ckeditor/ckeditor5-code-block/theme/codeblock.css */
 .ck-content pre code {
   background: unset;
   padding: 0;
   border-radius: 0;
 }
-
 @media print {
-  /* @ckeditor/ckeditor5-page-break/theme/pagebreak.css */
   .ck-content .page-break {
     padding: 0;
   }
-
-  /* @ckeditor/ckeditor5-page-break/theme/pagebreak.css */
   .ck-content .page-break::after {
     display: none;
   }
 }
 
+/* ====================================================================
+   TÙY CHỈNH GIAO DIỆN (CUSTOM STYLES) ĐỂ KHỚP VỚI TAILWIND FRONTEND
+   ==================================================================== */
+
+.ck-content {
+  font-family:
+    Roboto,
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    sans-serif;
+  color: #374151; /* Màu xám đậm text-gray-700 để dễ đọc */
+  line-height: 1.625; /* Khoảng cách dòng chuẩn của Tailwind (leading-relaxed) */
+}
+
 .ck-content h1 {
-  font-size: 2.3em;
-  line-height: 1.2em;
-  padding-top: 0.8em;
-  margin-bottom: 0.4em;
-  font-weight: 500;
-  letter-spacing: 5px;
+  font-size: 2.25em; /* ~36px */
+  line-height: 1.3em;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  font-weight: 700;
+  color: #111827; /* text-gray-900 */
 }
 
+/* H2 theo màu xanh thương hiệu */
 .ck-content h2 {
-  font-size: 2.5em;
-  line-height: 1.2em;
-  padding-top: 0.4em;
-
-  margin-bottom: 0.4em;
-  font-weight: 400;
+  font-size: 1.5em; /* ~24px */
+  line-height: 1.4em;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  font-weight: 700;
+  color: #137b38; /* Màu xanh của website */
 }
 
+/* H3 dành cho tiêu đề phụ */
+.ck-content h3 {
+  font-size: 1.25em; /* ~20px */
+  line-height: 1.4em;
+  font-weight: 700;
+  margin-top: 1.25em;
+  margin-bottom: 0.5em;
+  color: #1f2937; /* text-gray-800 */
+}
+
+.ck-content h4 {
+  font-size: 1.1em;
+  font-weight: 600;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  color: #374151;
+}
+
+/* Định dạng đoạn văn (Xóa text-indent, thêm margin dưới) */
 .ck-content p {
-  font-size: 1em;
-  font-weight: 300;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  text-indent: 12px;
-  line-height: 1.6em;
-  /* padding-top: .2em; */
-  /* margin-bottom: 18px; */
-  font-family: "Lexend Deca";
+  font-size: 1em; /* 16px */
+  font-weight: 400;
+  margin-top: 0;
+  margin-bottom: 1em;
+  line-height: 1.75;
 }
 
+/* Định dạng thẻ trích dẫn (Blockquote) */
 .ck-content blockquote {
   font-size: 1em;
   line-height: 1.6em;
-  padding-top: 0.2em;
-  border-left: 5px solid #ccc;
-  margin-left: 0;
-  margin-right: 0;
-  overflow: hidden;
+  padding: 1em 1.5em;
+  border-left: 4px solid #137b38; /* Đổi viền sang màu xanh thương hiệu */
+  background-color: #f9fafb; /* Nền xám nhạt */
+  margin: 1.5em 0;
+  font-style: italic;
+  color: #4b5563; /* text-gray-600 */
+}
+
+/* Định dạng danh sách (List) */
+.ck-content ul,
+.ck-content ol {
   padding-left: 1.5em;
-  padding-right: 1.5em;
+  margin-bottom: 1.5em;
+  margin-top: 0;
 }
 
-.ck-content ul {
-  padding-left: 25px;
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+.ck-content li {
+  margin-bottom: 0.5em;
+  line-height: 1.625;
 }
 
+/* Định dạng thẻ Link (a) */
 .ck-content a {
-  color: #007bff;
+  color: #137b38; /* Xanh lá thương hiệu */
   text-decoration: none;
+  font-weight: 500;
 }
 
 .ck-content a:hover {
   text-decoration: underline;
 }
 
-.ck-content h3 {
-  font-size: 30px;
-  font-weight: 800;
-  padding-top: 10px;
-  padding-bottom: 10px;
+/* Tùy chỉnh hiển thị Bảng (Table) giống Tailwind UI */
+.ck-content .table table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #e5e7eb; /* border-gray-200 */
+  border-radius: 6px;
+}
+
+.ck-content .table table td,
+.ck-content .table table th {
+  padding: 0.75em 1em;
+  border: 1px solid #e5e7eb;
+}
+
+.ck-content .table table th {
+  font-weight: 600;
+  background-color: #137b38; /* Nền xanh */
+  color: #ffffff; /* Chữ trắng */
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 0.875em;
+}
+
+/* Khối hình ảnh và Caption */
+.ck-content figure.image {
+  margin: 2em auto;
+}
+
+.ck-content figure.image img {
+  border-radius: 6px; /* Bo góc hình ảnh nhẹ */
+}
+
+.ck-content figure.image figcaption {
+  text-align: center;
+  font-style: italic;
+  color: #6b7280; /* text-gray-500 */
+  background-color: transparent;
+  padding: 0.5em 0 0 0;
+  font-size: 0.875em; /* 14px */
+}
+
+.ck-content .table > figcaption {
+  background-color: transparent;
+  font-style: italic;
+  color: #6b7280;
 }

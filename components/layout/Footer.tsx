@@ -8,9 +8,17 @@ import {
   Youtube,
   MessageCircle,
   Music,
+  PhoneCall,
 } from "lucide-react";
+import { SiZalo } from "react-icons/si";
+import { LocalFindById } from "@components/items/Handle";
+import { ContactProps, SocialMediaProps } from "@assets/props/PropsConfig";
+import Link from "next/link";
 
-export default function Footer() {
+export default function Footer({ Config }: { Config: Array<any> }) {
+  const ContactData: ContactProps = LocalFindById(Config, "contact");
+  const SocialMeedia: SocialMediaProps = LocalFindById(Config, "SocialMedia");
+
   return (
     <footer className="bg-[#0f5b27] text-gray-200 py-12 lg:py-16 border-t-4 border-[#4caf50]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -22,29 +30,27 @@ export default function Footer() {
             </h3>
             <div className="w-12 h-0.5 bg-[#a3e635] mb-6"></div>
             <h4 className="text-white font-bold text-base mb-4">
-              CHUYỂN NHÀ TRỌN GÓI 24H
+              Dọn Nhà Chuyên Nghiệp Thành Tài
             </h4>
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-[#a3e635] flex-shrink-0 mt-0.5" />
                 <span className="text-sm leading-relaxed">
-                  23 Đường số 10, Phường Bình Trị Đông, TPHCM (thuộc Phường Bình
-                  Hưng Hòa A, Quận Bình Tân cũ).
+                  {ContactData?.CompanyAddress}
                 </span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-[#a3e635] flex-shrink-0" />
-                <span className="text-sm font-bold text-yellow-400 text-lg">
-                  1800.00.38
-                </span>
+                <Link
+                  href={`tel:${ContactData?.Hotline}`}
+                  className=" font-bold text-yellow-400 text-lg"
+                >
+                  {ContactData?.Hotline}
+                </Link>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-[#a3e635] flex-shrink-0" />
-                <span className="text-sm">Chuyennha24h.info@gmail.com</span>
-              </li>
-              <li className="flex items-center gap-3">
-                <FileText className="w-5 h-5 text-[#a3e635] flex-shrink-0" />
-                <span className="text-sm">MST: 0317021496</span>
+                <span className="text-sm">{ContactData?.Email}</span>
               </li>
             </ul>
           </div>
@@ -57,11 +63,15 @@ export default function Footer() {
             <div className="w-12 h-0.5 bg-[#a3e635] mb-6"></div>
             <ul className="space-y-3">
               {[
-                { name: "Dịch vụ chuyển trọ TPHCM", link: "#" },
-                { name: "Chuyển nhà chung cư", link: "#" },
-                { name: "Dịch vụ chuyển đồ", link: "#" },
-                { name: "Vận chuyển két sắt", link: "#" },
-                { name: "Chuyển nhà trọn gói", link: "#" },
+                {
+                  name: "Dịch vụ chuyển trọ",
+                  link: "/blogs/dich-vu-chuyen-tro",
+                },
+                { name: "Chuyển nhà chung cư", link: "/chuyen-nha-chung-cu" },
+
+                { name: "Vận chuyển két sắt", link: "/dich-vu-chuyen-ket-sat" },
+                { name: "Cho thuê xe tải", link: "/dich-vu-cho-thue-xe-tai" },
+                { name: "Dịch vụ khác", link: "/blogs/dich-vu-khac" },
               ].map((item, index) => (
                 <li key={index}>
                   <a
@@ -84,13 +94,21 @@ export default function Footer() {
             <div className="w-12 h-0.5 bg-[#a3e635] mb-6"></div>
             <ul className="space-y-3">
               {[
-                { name: "Giới thiệu", link: "#" },
-                { name: "Tuyển dụng", link: "#" },
-                { name: "Phương thức thanh toán", link: "#" },
-                { name: "Chính sách bồi thường", link: "#" },
-                { name: "Chính sách bảo mật", link: "#" },
-                { name: "Cẩm nang chuyển trọ", link: "#" },
-                { name: "Các câu hỏi thường gặp", link: "#" },
+                { name: "Giới thiệu", link: "/blogs/gioi-thieu" },
+
+                {
+                  name: "Phương thức thanh toán",
+                  link: "/phuong-thuc-thanh-toan",
+                },
+                {
+                  name: "Chính sách bồi thường",
+                  link: "/chinh-sach-boi-thuong",
+                },
+                { name: "Chính sách bảo mật", link: "/chinh-sach-bao-mat" },
+                {
+                  name: "Các câu hỏi thường gặp",
+                  link: "/cac-cau-hoi-thuong-gap",
+                },
               ].map((item, index) => (
                 <li key={index}>
                   <a
@@ -113,34 +131,28 @@ export default function Footer() {
             <div className="w-12 h-0.5 bg-[#a3e635] mb-6"></div>
             <div className="flex flex-wrap gap-4">
               <a
-                href="#"
+                href={SocialMeedia?.fanpage}
                 className="w-10 h-10 rounded-full bg-[#1877F2] flex items-center justify-center hover:-translate-y-1 transition-transform duration-300 shadow-lg"
               >
                 <Facebook className="w-5 h-5 text-white" fill="currentColor" />
               </a>
               <a
-                href="#"
-                className="w-10 h-10 rounded-full bg-[#FF0000] flex items-center justify-center hover:-translate-y-1 transition-transform duration-300 shadow-lg"
+                href={SocialMeedia?.zalo}
+                className="w-10 h-10 rounded-full bg-[#1877F2] flex items-center justify-center hover:-translate-y-1 transition-transform duration-300 shadow-lg"
               >
-                <Youtube className="w-5 h-5 text-white" />
+                <SiZalo className="w-5 h-5 text-white" />
               </a>
               <a
-                href="#"
+                href={`tel:${ContactData?.Hotline}`}
                 className="w-10 h-10 rounded-full bg-[#0068FF] flex items-center justify-center hover:-translate-y-1 transition-transform duration-300 shadow-lg"
               >
-                <MessageCircle className="w-5 h-5 text-white" />
-              </a>
-              <a
-                href="#"
-                className="w-10 h-10 rounded-full bg-black flex items-center justify-center hover:-translate-y-1 transition-transform duration-300 shadow-lg"
-              >
-                <Music className="w-5 h-5 text-white" />
+                <PhoneCall className="w-5 h-5 text-white" />
               </a>
             </div>
 
             {/* DMCA hoặc Copyright text (Tuỳ chọn) */}
             <div className="mt-8 text-xs text-gray-400">
-              © 2026 Chuyển Nhà Trọn Gói 24H.
+              © 2026 Dọn Nhà Chuyên Nghiệp Thành Tài .
               <br />
               Đã đăng ký bản quyền.
             </div>
