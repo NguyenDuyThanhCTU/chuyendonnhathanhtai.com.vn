@@ -184,10 +184,10 @@ export default function Header({ Posts, Config }: HeaderProps) {
                 Tổng đài miễn phí
               </span>
               <a
-                href="tel:18000038"
+                href={`tel:${ContactData?.Hotline}`}
                 className="block text-2xl font-bold text-[#137b38]"
               >
-                1800.00.38
+                {ContactData?.Hotline}
               </a>
             </div>
           </div>
